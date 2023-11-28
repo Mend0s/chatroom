@@ -1,0 +1,38 @@
+// Qt发送给服务器
+    /* {
+            {"type": "check"}，
+                logic:登录  
+                register ：注册  
+                    下面两个：text里需要存放客户端的用户名
+                // exit: 退出，断开连接。
+                queryNumber: 查询在线人数 : 只显示数字
+                changPw: 修改密码
+                changeNickName: 修改昵称
+                text: 聊天文本
+            {"account": ""},
+            {"nickname": ""},
+            {"password": ""},
+            {"newNickName": ""},
+            {"newPw":""},
+            {"text": "hello world\n"}
+        }
+    */
+
+    // 服务器返回给Qt
+    /* 
+            登录 : {"logic": "true"} true/false
+                {"logic": "false: 账号输入错误"}
+                {"logic": "false: 密码输入错误"}
+            注册 : {"register": "true"} true/false
+            查询在线人数 : 只显示数字 {"queryNumber": "123"}
+            修改密码： {"changPw": "true"} true/false
+            修改昵称： {"changeNickName": "true"}
+    */
+
+   // 发送给所有客户端的信息
+   /*
+        {
+            {"sender": "user1"},
+            {"message": "hello"}
+        }
+   */
